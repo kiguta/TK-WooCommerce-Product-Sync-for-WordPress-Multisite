@@ -1,0 +1,67 @@
+# Copyright (c) 2026 Tonie Kiguta
+# This file is distributed under the same license as the TK WooCommerce Product Sync for Multisite plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: TK WooCommerce Product Sync for Multisite 1.1.0\n"
+"Report-Msgid-Bugs-To: https://ziprof.co.ke\n"
+"POT-Creation-Date: 2025-06-29T00:00:00+03:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: WP-CLI 2.x\n"
+"X-Domain: tk-woocommerce-product-sync\n"
+
+#. Plugin Name of the plugin
+msgid "TK WooCommerce Product Sync for Multisite"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://ziprof.co.ke"
+msgstr ""
+
+#. Description of the plugin
+msgid "Automatically syncs WooCommerce products (Simple & Variable) from the master site to all subsites in a WordPress Multisite network. Includes bulk sync and bulk delete actions."
+msgstr ""
+
+#. Author of the plugin
+msgid "Tonie Kiguta"
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "This plugin requires WooCommerce to be installed and active. Please install and activate WooCommerce, then try again."
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "Activation Failed"
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "TK WooCommerce Product Sync"
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "This plugin requires WooCommerce to be installed and active."
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "Sync to All Subsites"
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "DELETE from All Subsites"
+msgstr ""
+
+#: tk-woocommerce-product-sync.php
+msgid "%s product queued for background sync. Monitor progress at <a href=\"%s\">Scheduled Actions</a>."
+msgid_plural "%s products queued for background sync. Monitor progress at <a href=\"%s\">Scheduled Actions</a>."
+msgstr[0] ""
+msgstr[1] ""
+
+#: tk-woocommerce-product-sync.php
+msgid "%s product successfully deleted from all subsites."
+msgid_plural "%s products successfully deleted from all subsites."
+msgstr[0] ""
+msgstr[1] ""
