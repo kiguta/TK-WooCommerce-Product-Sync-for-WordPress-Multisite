@@ -127,6 +127,11 @@ All sites in a WordPress Multisite network typically share the same `wp-content/
 
 ## Changelog
 
+### v1.1.1
+
+- Declared HPOS (High-Performance Order Storage) compatibility to resolve the WooCommerce incompatible plugins notice.
+- Bumped tested-up-to version to WooCommerce 10.9.1.
+
 ### v1.1.0
 
 - Bulk sync now runs in the background via a queue - the page no longer freezes while syncing large numbers of products

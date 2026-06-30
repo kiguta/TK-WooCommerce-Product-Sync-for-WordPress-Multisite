@@ -3,7 +3,7 @@
  * Plugin Name: TK WooCommerce Product Sync for WordPress Multisite
  * Plugin URI:  https://ziprof.co.ke
  * Description: Automatically syncs WooCommerce products (Simple & Variable) from the master site to all subsites in a WordPress Multisite network. Includes bulk sync and bulk delete actions.
- * Version:     1.1.0
+ * Version:     1.1.1
  * Author:      Tonie Kiguta
  * Author URI:  https://ziprof.co.ke
  * License:     GPL v2 or later
@@ -15,7 +15,7 @@
  * Requires PHP: 7.4
  * Requires Plugins: woocommerce
  * WC requires at least: 5.0
- * WC tested up to: 10.8.1
+ * WC tested up to: 10.9.1
  */
 
 if (!defined('ABSPATH')) {
@@ -66,6 +66,12 @@ function tk_is_woocommerce_active()
 
 add_action('plugins_loaded', function () {
     load_plugin_textdomain('tk-woocommerce-product-sync', false, dirname(plugin_basename(__FILE__)) . '/languages');
+});
+
+add_action('before_woocommerce_init', function () {
+    if (class_exists(\Automattic\WooCommerce\Utilities\FeaturesUtil::class)) {
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility('custom_order_tables', __FILE__, true);
+    }
 });
 
 // ---------------------------------------------------------------------

@@ -3,11 +3,11 @@ Contributors: toniekiguta
 Tags: woocommerce, multisite, product-sync, network, sync
 Requires at least: 5.8
 Tested up to: 7.0
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires PHP: 7.4
 Requires Plugins: woocommerce
 WC requires at least: 5.0
-WC tested up to: 10.8.1
+WC tested up to: 10.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -86,6 +86,10 @@ The plugin logs the error to your server's PHP error log and continues syncing t
 3. The confirmation prompt shown when deleting the plugin, listing what data will be removed.
 
 == Changelog ==
+
+= 1.1.1 =
+* Declared HPOS (High-Performance Order Storage) compatibility to resolve the WooCommerce incompatible plugins notice.
+* Bumped tested-up-to version to WooCommerce 10.9.1.
 
 = 1.1.0 =
 * Bulk sync now runs in the background via a queue — the page no longer freezes while syncing large numbers of products.
