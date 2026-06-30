@@ -72,6 +72,18 @@ add_action('before_woocommerce_init', function () {
 });
 
 // ---------------------------------------------------------------------
+// --- DONATE LINK (Plugins screen row meta) ---
+// ---------------------------------------------------------------------
+
+add_filter('plugin_row_meta', 'tk_plugin_row_meta', 10, 2);
+function tk_plugin_row_meta($links, $file) {
+    if (plugin_basename(__FILE__) === $file) {
+        $links[] = '<a href="https://www.paypal.com/donate/?hosted_button_id=CSQFKDWQZVE4W" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="' . esc_attr__('Donate with PayPal', 'tk-product-sync-for-woocommerce') . '" style="vertical-align:middle;"></a>';
+    }
+    return $links;
+}
+
+// ---------------------------------------------------------------------
 // --- DELETION CONFIRMATION PROMPT (Plugins screen) ---
 // ---------------------------------------------------------------------
 
