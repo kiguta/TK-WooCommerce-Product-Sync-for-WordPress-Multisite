@@ -127,6 +127,12 @@ All sites in a WordPress Multisite network typically share the same `wp-content/
 
 ## Changelog
 
+### v1.1.2
+
+- Gated all debug error_log() calls behind WP_DEBUG to comply with WordPress plugin coding standards.
+- Added phpcs:ignore annotations on error_log() lines to satisfy static analysis checks.
+- Fixed phpcs:ignore placement in uninstall.php so the meta_key slow query notice is correctly suppressed on the right line.
+
 ### v1.1.1
 
 - Declared HPOS (High-Performance Order Storage) compatibility to resolve the WooCommerce incompatible plugins notice.
