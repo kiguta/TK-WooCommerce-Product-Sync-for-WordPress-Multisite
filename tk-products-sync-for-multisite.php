@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: TK Product Sync for WooCommerce Multisite
+ * Plugin Name: TK Products Sync for Multisite
  * Plugin URI:  https://ziprof.co.ke
  * Description: Automatically syncs WooCommerce products (Simple & Variable) from the master site to all subsites in a WordPress Multisite network. Includes bulk sync and bulk delete actions.
  * Version:     1.1.2
@@ -8,7 +8,7 @@
  * Author URI:  https://ziprof.co.ke
  * License:     GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: tk-product-sync-for-woocommerce
+ * Text Domain: tk-products-sync-for-multisite
  * Domain Path: /languages
  * Network:     true
  * Requires at least: 5.8
@@ -35,8 +35,8 @@ function tk_check_requirements_on_activation()
     if (!tk_is_woocommerce_active()) {
         deactivate_plugins(plugin_basename(__FILE__));
         wp_die(
-            esc_html__('This plugin requires WooCommerce to be installed and active. Please install and activate WooCommerce, then try again.', 'tk-product-sync-for-woocommerce'),
-            esc_html__('Activation Failed', 'tk-product-sync-for-woocommerce'),
+            esc_html__('This plugin requires WooCommerce to be installed and active. Please install and activate WooCommerce, then try again.', 'tk-products-sync-for-multisite'),
+            esc_html__('Activation Failed', 'tk-products-sync-for-multisite'),
             array('back_link' => true)
         );
     }
@@ -48,8 +48,8 @@ function tk_woocommerce_missing_notice()
     if (!tk_is_woocommerce_active()) {
         printf(
             '<div class="notice notice-error"><p><strong>%s</strong>: %s</p></div>',
-            esc_html__('TK Product Sync for WooCommerce', 'tk-product-sync-for-woocommerce'),
-            esc_html__('This plugin requires WooCommerce to be installed and active.', 'tk-product-sync-for-woocommerce')
+            esc_html__('TK Products Sync for Multisite', 'tk-products-sync-for-multisite'),
+            esc_html__('This plugin requires WooCommerce to be installed and active.', 'tk-products-sync-for-multisite')
         );
     }
 }
@@ -78,7 +78,7 @@ add_action('before_woocommerce_init', function () {
 add_filter('plugin_row_meta', 'tk_plugin_row_meta', 10, 2);
 function tk_plugin_row_meta($links, $file) {
     if (plugin_basename(__FILE__) === $file) {
-        $links[] = '<a href="https://www.paypal.com/donate/?hosted_button_id=CSQFKDWQZVE4W" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="' . esc_attr__('Donate with PayPal', 'tk-product-sync-for-woocommerce') . '" style="vertical-align:middle;"></a>';
+        $links[] = '<a href="https://www.paypal.com/donate/?hosted_button_id=CSQFKDWQZVE4W" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="' . esc_attr__('Donate with PayPal', 'tk-products-sync-for-multisite') . '" style="vertical-align:middle;"></a>';
     }
     return $links;
 }
@@ -99,7 +99,7 @@ function tk_uninstall_confirmation_script()
 
             deleteLink.addEventListener('click', function (e) {
                 var message = [
-                    'Are you sure you want to delete TK Product Sync for WooCommerce?\n',
+                    'Are you sure you want to delete TK Products Sync for Multisite?\n',
                     'The following will be permanently removed:',
                     '  - The sync relationship data stored on every product across all subsites (the _tk_master_product_id meta key).\n',
                     'The following will NOT be removed:',
@@ -146,8 +146,8 @@ add_filter('bulk_actions-edit-product', 'tk_register_bulk_actions', 99);
 function tk_register_bulk_actions($bulk_actions)
 {
     if (get_current_blog_id() == MASTER_BLOG_ID && current_user_can('edit_products')) {
-        $bulk_actions['tk_sync_products'] = __('Sync to All Subsites', 'tk-product-sync-for-woocommerce');
-        $bulk_actions['tk_delete_products'] = __('DELETE from All Subsites', 'tk-product-sync-for-woocommerce');
+        $bulk_actions['tk_sync_products'] = __('Sync to All Subsites', 'tk-products-sync-for-multisite');
+        $bulk_actions['tk_delete_products'] = __('DELETE from All Subsites', 'tk-products-sync-for-multisite');
     }
     return $bulk_actions;
 }
@@ -197,7 +197,7 @@ function tk_display_bulk_action_notices()
                 '%1$s product queued for background sync. Monitor progress at <a href="%2$s">Scheduled Actions</a>.',
                 '%1$s products queued for background sync. Monitor progress at <a href="%2$s">Scheduled Actions</a>.',
                 $count,
-                'tk-product-sync-for-woocommerce'
+                'tk-products-sync-for-multisite'
             ),
             $count,
             $scheduler_url
@@ -215,7 +215,7 @@ function tk_display_bulk_action_notices()
                     '%s product successfully deleted from all subsites.',
                     '%s products successfully deleted from all subsites.',
                     $count,
-                    'tk-product-sync-for-woocommerce'
+                    'tk-products-sync-for-multisite'
                 ),
                 $count
             ))

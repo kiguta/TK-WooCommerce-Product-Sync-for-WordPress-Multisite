@@ -1,8 +1,8 @@
 # Copyright (c) 2026 Tonie Kiguta
-# This file is distributed under the same license as the TK Product Sync for WooCommerce Multisite plugin.
+# This file is distributed under the same license as the TK Products Sync for Multisite plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: TK Product Sync for WooCommerce Multisite 1.1.1\n"
+"Project-Id-Version: TK Products Sync for Multisite 1.1.2\n"
 "Report-Msgid-Bugs-To: https://ziprof.co.ke\n"
 "POT-Creation-Date: 2025-06-29T00:00:00+03:00\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: WP-CLI 2.x\n"
-"X-Domain: tk-product-sync-for-woocommerce\n"
+"X-Domain: tk-products-sync-for-multisite\n"
 
 #. Plugin Name of the plugin
 msgid "TK Product Sync for WooCommerce Multisite"

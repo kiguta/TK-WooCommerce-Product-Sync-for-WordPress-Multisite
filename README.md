@@ -1,8 +1,8 @@
-# TK Product Sync for WooCommerce Multisite
+# TK Products Sync for Multisite
 
 Managing products across multiple WordPress sites can quickly become a headache. If you run a WordPress Multisite network - where several shops live under one WordPress installation - you would normally have to add or update each product on every site individually. This plugin solves that.
 
-**TK Product Sync for WooCommerce** lets you manage all your products in one place - your main (master) site - and automatically copies every change to all other sites on your network. Update a price, swap an image, or add a new variation on the master site, and every other site reflects that change instantly without you lifting another finger.
+**TK Products Sync for Multisite** lets you manage all your products in one place - your main (master) site - and automatically copies every change to all other sites on your network. Update a price, swap an image, or add a new variation on the master site, and every other site reflects that change instantly without you lifting another finger.
 
 It supports both Simple products and Variable products (products with options like size or colour), and syncs everything: product details, prices, images, categories, tags, and stock information.
 
@@ -21,9 +21,9 @@ Before installing, make sure your setup meets the following:
 
 ## Installation
 
-1. Download the plugin and upload the `tk-woocommerce-product-sync` folder to your `/wp-content/plugins/` directory
+1. Download the plugin and upload the `tk-products-sync-for-multisite` folder to your `/wp-content/plugins/` directory
 2. Log in to your **Network Admin** dashboard (the top-level admin area of your multisite network)
-3. Go to **Plugins** and find **TK Product Sync for WooCommerce**
+3. Go to **Plugins** and find **TK Products Sync for Multisite**
 4. Click **Network Activate**
 5. That's it - no settings to configure. The plugin starts working immediately
 
